@@ -5,6 +5,7 @@ import {
   Text,
   View,
   Video,
+  Sound
 } from 'react-vr';
 
 export default class One extends React.Component {
@@ -30,7 +31,10 @@ export default class One extends React.Component {
             flexDirection: "row",
             alignItems: 'center',
             justifyContent: 'center',
-            layoutOrigin: [0.5, 0.5]
+            layoutOrigin: [0.5, 0.5],
+            transform:[
+              {rotateY : -90}
+            ]
           }}>
             <View style={{
                 transform:[
@@ -40,12 +44,14 @@ export default class One extends React.Component {
               }}>
               {multiplyVideo(2, "http://d2e2gcldkx3p3k.cloudfront.net/track2-channel1.mp4")}
             </View>
+            <Sound source={{uri: "http://dryhr7ux6pki1.cloudfront.net/02-grainStudy2theBrook.mp3"}} loop={true}/>
             <View style={{
                 transform:[
                   {rotateX : -90},
                   {translate: [30, 0, 10]}
                 ]
               }}>
+
               {multiplyVideo(2, "http://d2e2gcldkx3p3k.cloudfront.net/track2-channel1.mp4")}
             </View>
             <View style={{

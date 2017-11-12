@@ -5,6 +5,7 @@ import {
   Text,
   View,
   Video,
+  Sound
 } from 'react-vr';
 
 export default class One extends React.Component {
@@ -42,7 +43,9 @@ export default class One extends React.Component {
                 height:2.0
               }}
               loop={true}
-              source={{uri: "http://d2e2gcldkx3p3k.cloudfront.net/track1-channel1.mp4"}} />
+              source={{uri: "http://d2e2gcldkx3p3k.cloudfront.net/track1-channel1.mp4"}} >
+                <Sound source={{uri: "http://dryhr7ux6pki1.cloudfront.net/01-HyperInstrumentalism2forRobertReigle.mp3"}} loop={true}/>
+              </Video>
           </View>
           <View style={{
               transform:[
