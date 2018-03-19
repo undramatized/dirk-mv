@@ -79,7 +79,7 @@ export default class One extends React.Component {
                 height:2.0
               }}
               loop={true}
-              source={{uri: "http://d2e2gcldkx3p3k.cloudfront.net/track1-channel1.mp4"}} />
+              source={{uri: "https://d2e2gcldkx3p3k.cloudfront.net/track1_layered.mp4"}} />
           </View>
         </View>
       </View>
