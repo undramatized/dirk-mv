@@ -3,7 +3,14 @@ import {
   Animated
 } from 'react-vr';
 
-export default class BreathingView extends React.Component {
+const speedValues = {
+  1: {in: 4500, out: 2500},
+  2: {in: 3500, out: 2000},
+  3: {in: 2500, out: 1500},
+  4: {in: 1500, out: 1000},
+}
+
+class BreathingView extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -20,7 +27,7 @@ export default class BreathingView extends React.Component {
       this.state.position,
       {
         toValue: -0.5,
-        duration: 4500,
+        duration: speedValues[this.props.speed].in,
       }
     ).start(this.breathOut)
   }
@@ -30,7 +37,7 @@ export default class BreathingView extends React.Component {
       this.state.position,
       {
         toValue: 0,
-        duration: 2500,
+        duration: speedValues[this.props.speed].out,
       }
     ).start(this.breathIn)
   }
@@ -47,3 +54,7 @@ export default class BreathingView extends React.Component {
     )
   }
 }
+
+BreathingView.defaultProps = {speed: 1}
+
+export default BreathingView;

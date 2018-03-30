@@ -15,7 +15,7 @@ import Six from './components/Six';
 
 export default class AscensionVR extends React.Component {
   state = {
-    currentView: 4
+    currentView: 5
   }
 
   render() {
