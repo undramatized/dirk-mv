@@ -12,10 +12,11 @@ import Two from './components/Two';
 import Four from './components/Four';
 import Five from './components/Five';
 import Six from './components/Six';
+import Eight from './components/Eight';
 
 export default class AscensionVR extends React.Component {
   state = {
-    currentView: 5
+    currentView: 6
   }
 
   render() {
@@ -24,7 +25,8 @@ export default class AscensionVR extends React.Component {
       <Two/>,
       <Four/>,
       <Five/>,
-      <Six/>
+      <Six/>,
+      <Eight/>
     ]
     const showView = () => {
       return views[this.state.currentView - 1];
