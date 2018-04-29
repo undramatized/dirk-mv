@@ -14,10 +14,11 @@ import Five from './components/Five';
 import Six from './components/Six';
 import Eight from './components/Eight';
 import Nine from './components/Nine';
+import Ten from './components/Ten';
 
 export default class AscensionVR extends React.Component {
   state = {
-    currentView: 7
+    currentView: 8
   }
 
   render() {
@@ -28,14 +29,15 @@ export default class AscensionVR extends React.Component {
       <Five/>,
       <Six/>,
       <Eight/>,
-      <Nine/>
+      <Nine/>,
+      <Ten/>
     ]
     const showView = () => {
       return views[this.state.currentView - 1];
     }
     return (
       <View>
-        <Pano source={asset('chess-world.jpg')}/>
+        {/* <Pano source={asset('chess-world.jpg')}/> */}
         {showView()}
       </View>
     );
